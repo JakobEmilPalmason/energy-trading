@@ -1,0 +1,48 @@
+# --- Secrets & local config ---
+.env
+.env.*
+!.env.example
+
+# --- Data (never commit; everything here is re-fetchable from public sources) ---
+# Created at runtime by energy_markets.config; see docs/data-sources.md.
+data/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Virtual envs ---
+.venv/
+venv/
+env/
+
+# --- uv ---
+# uv.lock IS committed (pinned environment) — do not ignore it.
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Obsidian ---
+# The notes vault lives in vault/. Vault-level settings are committed (graph,
+# appearance, hotkeys, and community-plugins.json so plugins reinstall on clone),
+# but per-machine layout state, caches, and vendored plugin code are not.
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/cache
+vault/.obsidian/plugins/
